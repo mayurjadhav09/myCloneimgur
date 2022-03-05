@@ -1,0 +1,2 @@
+# myCloneimgur
+ practice assingment 
