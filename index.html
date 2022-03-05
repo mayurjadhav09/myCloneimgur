@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Imgur</title>
+  </head>
+  <body>
+    <div id="navBar"> </div>
+    <div id="datafetch"></div>
+  </body>
+</html>
+<script type="module">
+    let datafetch=document.getElementById("datafetch")
+
+
+  import {navBar} from "./pages/navBar.js";
+  document.getElementById("navBar").innerHTML=navBar()
+
+   
+
+    let fetchData=async()=>{
+        try{
+            // let url ="https://picsum.photos/v2/list?page=1&limit=100"
+            // let request =await fetch(`https://picsum.photos/v2/list?page=1&limit=100`)
+        let data= await request.json()
+        console.log(data)
+        // return data
+            showData(data)
+
+        }
+        catch(err){
+            console.log(err)
+        }
+      
+    }
+    console.log(fetchData())
+    let  showData=(data)=>{
+        data.forEach((element) => {
+            let main_div= document.createElement("div")
+            main_div.setAttribute("class","maindiv")
+
+            let imgDataDiv= document.createElement("div")
+            imgDataDiv.setAttribute("class","imgDataDiv")
+
+            let img = document.createElement("img")
+            img.setAttribute("class", "displayimg")
+            img.src=element.download_url
+
+            let author= document.createElement("h4")
+            author.innerText=element.author
+
+            imgDataDiv.append(img)
+            
+            main_div.append(imgDataDiv,author)
+            // ----------------------------------------------fetch data div_________________________
+
+            datafetch.append(main_div)
+            
+        });
+
+
+    }
+
+
+
+</script>
