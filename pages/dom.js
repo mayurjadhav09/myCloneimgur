@@ -50,7 +50,7 @@ catch(err){
 fetchData()
 let fixdata=async()=>{
 container.innerHTML=null
-input.value=""
+// input.value=""
 try{
 let req= await     fetch(`https://api.imgur.com/3/gallery/search/{${sort}}/{{window}}/{{page}}`, requestOptions)
 let response= await req.json()
