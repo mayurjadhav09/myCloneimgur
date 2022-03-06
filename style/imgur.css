@@ -1,7 +1,7 @@
 #container {
   display: grid;
   height: 500px;
-  grid-template-columns: 25% 25% 25% ;
+  grid-template-columns: 25% 25% 25%;
   grid-template-rows: auto auto auto;
   grid-gap: 15px;
   margin-top: 25px;
@@ -9,14 +9,12 @@
   margin: auto;
   justify-content: space-evenly;
   /* position: absolute; */
- 
+
   background-color: rgb(71, 73, 73);
   padding-top: 25px;
   z-index: 1;
   overflow-y: scroll;
-  
 }
-
 
 .maindiv {
   width: 90%;
@@ -25,7 +23,6 @@
   background-color: rgb(99, 101, 109);
   display: flex;
   /* margin-top: 25px; */
-
 
   border-radius: 10px;
   /* flex-direction: column; */
@@ -53,17 +50,16 @@
   /* overflow: scroll; */
   overflow-y: scroll;
   /* overflow-x: hidden; */
-/* text-overflow: wrap; */
-word-break: break-all;
+  /* text-overflow: wrap; */
+  word-break: break-all;
   font-family: Arial, Helvetica, sans-serif;
 }
-.text1::-webkit-scrollbar{
-    background-color: rgb(95, 95, 95);
-    border-radius: 5px;
-    width: 8px;
-
+.text1::-webkit-scrollbar {
+  background-color: rgb(95, 95, 95);
+  border-radius: 5px;
+  width: 8px;
 }
-.text1::-webkit-scrollbar-thumb{
-    background-color: rgb(165, 167, 175);
-    border-radius: 10px;
+.text1::-webkit-scrollbar-thumb {
+  background-color: rgb(165, 167, 175);
+  border-radius: 10px;
 }
