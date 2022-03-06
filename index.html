@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <link rel=icon type=image/png href=https://s.imgur.com/images/favicon-32x32.png sizes=32x32> 
+    <link rel=icon type=image/png href=https://s.imgur.com/images/favicon-96x96.png sizes=96x96> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="./style/navbar.css" />
     <link rel="stylesheet" href="./style/index.css">
-    <title>Imgur</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="./style/imgur.css">
+
+    <title>Imgur: the magic of internet</title>
+</head>
+<body>
+
     <div id="navBar">
         <div id="navContainer">
             <div class="navcont_div">
@@ -22,7 +28,9 @@
             </div>
             <!-- ------------searhbar--------------------------------------------------- -->
             <div class="searchBar">
-                <input id="searchdata" value="" type="text" placeholder="Images, #tags ,@users oh My!">
+                <!-- <input id="searchdata" onchange="fetchData()" oninput="debouncing(showData,1000)" value="" type="text" placeholder="Images, #tags ,@users oh My!"> -->
+                <input id="ip" type="text" onchange="fetchData()"  placeholder="Images, #tags ,@users oh My! press enter"   value="">
+
                 <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg" alt="">
             </div>
         
@@ -37,69 +45,65 @@
             </div>
             <div class="navcont_div"><button style="background-color: transparent;" class="imgrbtn">Sign in</button></div>
             <div class="navcont_div"><button style="width: 100%; height: 100%;" class="imgrbtn">Sign up</button></div>
-          </div> </div>
-    <div id="datafetch"></div>
-  </body>
+          </div> 
+        </div>
+        <div class="divbox">
+            <div class="divbox-1">
+              <img src="https://i.imgur.com/IkZeAAy.jpg" alt="">
+              <h4>Hydraulic Press</h4>
+              <h5>270 POSTS</h5>
+            </div>
+            <div class="divbox-2">
+              <img src="https://i.imgur.com/4bOlFT2.jpg" alt="">
+              <h4>Imgur13</h4>
+              <h5>7,839 POSTS</h5>
+            </div>
+            <div class="divbox-3">
+              <img src="https://i.imgur.com/uJSrScD.jpg" alt="">
+              <h4>Vintage</h4>
+              <h5>8,931 POSTS</h5>
+            </div>
+            <div class="divbox-4">
+              <img src="https://i.imgur.com/6Hxkaw9.jpg" alt="">
+              <h4>Pokemon</h4>
+              <h5>52,602 POSTS</h5>
+            </div>
+            <div class="divbox-5">
+              <img src="https://i.imgur.com/E7mghfR.jpg" alt="">
+              <h4>Black History Month</h4>
+              <h5>184 POSTS</h5>
+            </div>
+            <div class="divbox-6">
+              <img src="https://i.imgur.com/bdRjrrI.jpg" alt="">
+              <h4>Science And Tech</h4>
+              <h5>44,949 POSTS</h5>
+            </div>
+            <div class="divbox-7">
+              <img src="https://i.imgur.com/DbQMO3A.jpg" alt="">
+              <h4>Staff Pick</h4>
+              <h5>6,538 POSTS</h5>
+            </div>
+            <div class="divbox-8">
+              <img src="https://i.imgur.com/nrFCOUB.jpg" alt="">
+              <h4>Gaming</h4>
+              <h5>298,250 POSTS</h5>
+            </div>
+            <div class="divbox-9">
+              <img src="https://i.imgur.com/1z4dgZT.jpg" alt="">
+              <h4>Memes</h4>
+              <h5>571,237 POSTS</h5>
+            </div>
+            <div class="divbox-10">
+              <img src="https://i.imgur.com/4LBx79U.jpg" alt="">
+              <h4>OC</h4>
+              <h5>39,292 POSTS</h5>
+            </div>
+          </div>
+    <div id="container">
+        
+    </div>
+    
+</body>
 </html>
-<script type="module">
-    let datafetch=document.getElementById("datafetch")
-    let input= document.getElementById("searchdata")
-    // input.addEventListener("keypress", function(e){
-    //     if(e.keyCode==13){
-    //         e.preventDefault()
-    //         alert(`${input.value}`)
-    //     }
-    // });
-
-
-//   import {navBar} from "./pages/navBar.js";
-//   document.getElementById("navBar").innerHTML=navBar()
-
-   
-
-    let fetchData=async()=>{
-        try{
-            // let url ="https://picsum.photos/v2/list?page=1&limit=100"
-            // let request =await fetch(`https://picsum.photos/v2/list?page=1&limit=100`)
-        let data= await request.json()
-        console.log(data)
-        // return data
-            showData(data)
-
-        }
-        catch(err){
-            console.log(err)
-        }
-      
-    }
-    console.log(fetchData())
-    let  showData=(data)=>{
-        data.forEach((element) => {
-            let main_div= document.createElement("div")
-            main_div.setAttribute("class","maindiv")
-
-            let imgDataDiv= document.createElement("div")
-            imgDataDiv.setAttribute("class","imgDataDiv")
-
-            let img = document.createElement("img")
-            img.setAttribute("class", "displayimg")
-            img.src=element.download_url
-
-            let author= document.createElement("h4")
-            author.innerText=element.author
-
-            imgDataDiv.append(img)
-            
-            main_div.append(imgDataDiv,author)
-            // ----------------------------------------------fetch data div_________________________
-
-            datafetch.append(main_div)
-            
-        });
-
-
-    }
-
-
-
+<script src="./pages/dom.js">
 </script>
