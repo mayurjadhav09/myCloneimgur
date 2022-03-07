@@ -80,7 +80,7 @@ data.map((e)=>{
 
     let images= e.images
     images.map((el)=>{
-        if(el.type=="image/jpeg" && el.link!==null && el.description !==null){
+        if(el.type=="image/jpeg" ||el.type=='image/png' && el.link!==null && el.description !==null){
             let maindiv= document.createElement("div")
     maindiv.setAttribute("class","maindiv")
     
