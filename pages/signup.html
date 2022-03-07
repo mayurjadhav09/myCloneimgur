@@ -52,9 +52,9 @@
         </div>
       </div>
       <div class="credentials flex signin-container core-dark core-shadow">
-        <input type="text" placeholder="Username" class="br5 lvl1-dark last" id="username" />
+        <input type="text" value="" placeholder="Username" class="br5 lvl1-dark last" id="username" />
         <input type="text" placeholder="Email" class="br5 lvl1-dark last" id="email" />
-        <input type="password" placeholder="Password" class="br5 lvl1-dark last" id="password" />
+        <input type="password" value="" placeholder="Password" class="br5 lvl1-dark last" id="password" />
         <input type="password" placeholder="Retype Password" class="br5 lvl1-dark last" id="cpassword" />
         <div class="intl-tel-input allow-dropdown">
           <div class="flag-container">
@@ -82,14 +82,15 @@
 </body>
 </html>
 <script>
-    var username= document.getElementById("username").value
-    var password=document.getElementById("password").valuee
+    var username= document.getElementById("username")
+    var password=document.getElementById("password")
    
     function visshidden (){
         let data={
-            username:`${usename}`,
-            password:`${password}`
+           "username":`${username.value}`,
+            "password":`${password.value}`
         }
+        console.log(data)
             localStorage.setItem("userdata",JSON.stringify(data))
    
    // div1.script.opacity="0" 

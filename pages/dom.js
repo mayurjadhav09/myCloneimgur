@@ -146,3 +146,6 @@ function renderVisibility(){
     
    
 }
+function signup(){
+    window.location.href="./pages/signup.html"
+}

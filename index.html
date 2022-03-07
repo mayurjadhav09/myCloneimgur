@@ -107,11 +107,11 @@
           </button>
         </div>
         <div onclick="renderVisibility()" class="navcont_div">
-          <button  style="background-color: transparent" class="imgrbtn">
+          <button id="signinbtn"  style="background-color: transparent" class="imgrbtn">
             Sign in
           </button>
         </div>
-        <div class="navcont_div">
+        <div  onclick="signup()" class="navcont_div">
           <button style="width: 100%; height: 100%" class="imgrbtn">
             Sign up
           </button>
@@ -179,4 +179,16 @@
 
   </body>
 </html>
+<script>
+  // var signin= document.getElementById("signinbtn")
+  // let user= localStorage.getItem(JSON.parse("userdata"))
+  // // console.log(user)
+  // if(user.username==null ){
+  //   window.location.href="./pages/signin.html"
+  // }
+  // else{
+  //   signin.innerText=`${user.username}`
+  //   console.log(user.username)
+  // }
+</script>
 <script src="./pages/dom.js"></script>
