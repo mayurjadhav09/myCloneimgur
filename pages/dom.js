@@ -133,3 +133,16 @@ data.map((e)=>{
 //         },i)
     
 //     }
+
+function renderVisibility(){
+   
+   
+       
+    // div1.style.opacity="90"  
+    // main_imgr_container.style.opacity="0"
+    window.location.href="./pages/signin.html"
+    // main_imgr_container.style.visibility="hidden"
+    
+    
+   
+}

@@ -8,15 +8,27 @@
     sizes=96x96>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="./style/signin.css">
     <link rel="stylesheet" href="./style/navbar.css" />
     <link rel="stylesheet" href="./style/index.css" />
     <link rel="stylesheet" href="./style/imgur.css" />
+    <link rel="icon" type="image/png" href="//s.imgur.com/images/favicon.png" sizes="64x64" />
+    <link rel="icon" type="image/png" href="//s.imgur.com/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="//s.imgur.com/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="//s.imgur.com/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon-precomposed" href="//s.imgur.com/images/favicon-152.png" />
+    <link rel="stylesheet" type="text/css" href="//s.imgur.com/min/global.css?1646205073" />
+    <link rel="stylesheet" type="text/css" href="//s.imgur.com/min/newregister.css?1646205073" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet" />
     
 
     <title>Imgur: the magic of internet</title>
   </head>
   <body>
+    
+    
+    <div id="main_imgr_container">
     <div id="navBar">
       <div id="navContainer">
         <div class="navcont_div">
@@ -94,8 +106,8 @@
             Go Ad-Free
           </button>
         </div>
-        <div class="navcont_div">
-          <button style="background-color: transparent" class="imgrbtn">
+        <div onclick="renderVisibility()" class="navcont_div">
+          <button  style="background-color: transparent" class="imgrbtn">
             Sign in
           </button>
         </div>
@@ -106,6 +118,10 @@
         </div>
       </div>
     </div>
+    <!-- login--------------------------------------------------------------- -->
+   
+
+    <!-- login-----------------------------------------------------------------------end -->
     <div class="divbox">
       <div class="divbox-1">
         <img src="https://i.imgur.com/IkZeAAy.jpg" alt="" />
@@ -156,9 +172,11 @@
         <img src="https://i.imgur.com/4LBx79U.jpg" alt="" />
         <h4>OC</h4>
         <h5>39,292 POSTS</h5>
-      </div>
+      </div>  
     </div>
     <div id="container"></div>
+  </div>
+
   </body>
 </html>
 <script src="./pages/dom.js"></script>
